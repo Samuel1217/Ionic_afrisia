@@ -1,0 +1,133 @@
+@import "env";
+@import "color";
+@import "variables";
+@import "font";
+
+/*==============================================
+ *  Left Side-menu style
+===============================================*/
+.menu.menu-left{
+  background-color: @bg-color;
+  border-color: @subnav-color !important;
+  .bar-header{
+    height: @leftmenu-header-height !important;
+    text-align: center;
+    border-bottom: 1px solid @subnav-color !important;
+    .left-menu-avatar{
+      width: 100%;
+      padding: @leftmenu-avatar-size/5 0;
+      .avatar-wrap{
+        border: 4px solid @white;
+        border-radius: 45px;
+        width: @leftmenu-avatar-size;
+        height: @leftmenu-avatar-size;
+        margin: 0 auto;
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+          overflow: hidden;
+        }
+      }
+      p{
+        margin: 15px 0;
+        font-size: 24px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        word-break: keep-all;
+        word-wrap: break-word;
+        line-height: 24px;
+        height: 24px;
+
+      }
+    }
+  }
+  .has-header{
+    top: @leftmenu-header-height !important;
+    position: absolute !important;
+  }
+  .item,.item-content{
+    background-color: @bg-color;
+    border-color: @subnav-color;
+    color: @white;
+    h2,p{
+      color: @white;
+    }
+  }
+  .item.activated,.item-content.activated{
+    background-color: @subnav-color;
+  }
+  .item-icon-left .icon{
+  }
+  .item-icon-left .icon:before, .item-icon-right .icon:before{
+    width: 24px;
+    height: 24px;
+    line-height: 22px;
+    font-size: 14px !important;
+    border: 1px solid;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-box-shadow: 0px 0px 2px #888;
+    -webkit-box-shadow: 0px 0px 2px #888;
+    box-shadow: 0px 0px 2px #888;
+  }
+}
+/*==============================================
+ *  Right Side-menu style
+===============================================*/
+.menu.menu-right {
+  .item-content{
+    padding: 5px;
+  }
+  .order-item{
+    border: none;
+    border-bottom: 2px solid @bg-color;
+    p{
+      em{
+        color: @black;
+        font-weight: 600;
+      }
+    }
+    .order-item-actions{
+      .button{
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        min-height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+        border-radius: 100%;
+        border-width: 2px;
+        color: @title-black;
+        border-color: @title-black;
+        .icon{
+          top: -1px;
+          right: 6px!important;
+          position: relative;
+        }
+      }
+      .button .icon:before, .button.icon-left:before, .button.icon-right:before, .button.icon:before{
+        line-height: 30px;
+        font-size: 20px;
+      }
+
+      .button.item-edit-btn{}
+      .button.item-remove-btn{}
+    }
+    .order-item-title{
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 30px;
+    }
+  }
+  .order-item:last-child{
+    border-bottom-width: 1px;
+  }
+}
+
+

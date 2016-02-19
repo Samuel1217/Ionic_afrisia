@@ -1,0 +1,94 @@
+FEEDBACK FOR THE APPLE APP
+
+GENERAL:
+
+On the home screen replace the text, i.e., “The only food delivery service….” with “Quick food delivery from top-rated restaurants at your fingertips”
+(fixed)
+If you accidentally click on sign up using google, there’s no way to get back to the home page. Please fix
+(native impossible)
+If you accidentally click on login with facebook and click cancel, please change popup text from “FB Info” to “FB Login Cancelled”
+(fixed)
+Add the “SIGN UP” button on home page and remove it from the “LOGIN VIA EMAIL” page
+(fixed)
+When you add something to cart and click on the cart image you are brought to “My Order.” Either a) route clicking on the cart to the “Order Summary” page or b) add the net price, delivery price etc. to the “My Order” page. Reason being, the “My Order” page doesn’t have a detailed breakdown of prices and if the user clicks on checkout from “My Order” then they don’t see the breakdown before prompted to clicking “submit order”
+(fixed)
+When on the order summary page and you click on the trash icon, it should say “Cart Emptied!” not “Remove Success!”
+(fixed)
+For the failed credential email it should say “Please provide valid user credentials” not “Please provide valid user credentional”
+(api result problem)
+If you register manually then click on “restaurant details” you’re brought to a page called "Select Menu" which looks like a blank restaurant box.
+Please change title of page or make it blank, remove the grey box and add text that says “Please select location first”
+(fixed)
+If you register manually then click on “resort details” you’re brought to the "select restaurant" page with knights inn as the default location.
+The user should be brought to the “select location page.” Please fix
+(fixed)
+In the menu, change “Resort Details” to “Select Location” and change “Restaurant Details” to “Select Restaurant”
+(fixed)
+
+
+
+FORGOT PASSWORD FUNCTION:
+
+The message that’s sent to the personal email should read:
+
+Subject: “Your Bizitogo Password”
+Email body: please match the email received when you click forgot password on the website. Right now there are a number of typos. Also, as I mentioned before it should say “You have successfully retrieved your login credentials” not “You have successfully retrieved login credentials”
+
+
+
+SIGN UP PAGE:
+
+Put “Street Address” then “City” then “State”
+(fixed)
+When you click “REGISTER” the popup says “register.” Please change this to “Registration Successful.” This should load the “select location” page instead of the “edit profile” page.
+(fixed)
+
+
+EDIT PROFILE PAGE:
+
+Photo upload from camera and picture doesn’t work. Please fix
+(fixed)
+
+
+SELECT LOCATION PAGE:
+
+Images for locations are messed up. I'm still seeing 20% all over it. Also, I would suggest a lighter grey gradient for the listings like what’s on the website. Currently, it looks pretty dark
+(fixed,let discuss color)
+
+
+SELECT RESTAURANT PAGE:
+
+Images for restaurants are messed up. I'm still seeing 20% all over it. I would suggest a different color or hue from the location hue because right now its hard to differentiate the location box at the top from the restaurant boxes beneath it.
+
+
+
+ORDER SUMMARY PAGE:
+
+Change “Topping” to “Extras”
+(fixed)
+Change “Delivery Price” to “Delivery Fee”
+(fixed)
+
+CONTACT US PAGE:
+
+Replace “Company Name” with  “Company Name (if applicable)”
+(fixed)
+
+ABOUT US PAGE:
+
+Load the updated about us text (below):
+
+“Our company was established in June 2015 by a mother-daughter duo, Amena Solomon and Lori-Anne Ramsay, who are innovating the "Restaurants, Delivered" model in the Central Florida area. Together, with a team of highly driven and hard working Delivery and Sales Associates, we work to provide you with quick meal delivery from a diverse list from top-rated restaurants.
+
+ Restaurant delivery at the push of a button!
+
+Get easy access to a number of restaurants on our website or mobile app, customize your order and pay online! We consider the customers' experience at all times and it is our business to deliver fresh, delicious, meals to the location of your choice.
+
+If you want us to expand to your area, or you'd like to list your restaurant or resort, please inbox, tweet or email us and we'll get back to you ASAP!
+
+You are our priority and we look forward to doing business with you!
+
+ Thanks for choosing BIZI To Go!
+
+ - Amena and Lori”
+ (fixed)

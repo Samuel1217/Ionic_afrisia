@@ -1,0 +1,44 @@
+<ion-view class="register-view" title='<h3 style="margin-top:4px;font-weight: 500; color: #96c424;">Contact us</h3>' ng-init="init()">
+       <ion-nav-bar class="bar-positive">
+            <!--<ion-nav-back-button  class="button-clear"><i class="ion-ios-arrow-back"></i>-->
+            <!--</ion-nav-back-button>-->
+
+            <ion-nav-buttons side="left">
+               <button class="button button-icon button-clear" ng-click="goBack()">
+                  <img class="back-button-img" src="img/back_button.png">
+               </button>   
+            </ion-nav-buttons>
+               </ion-nav-bar>
+    <ion-content has-bouncing="true">
+   
+        <div class="welcome-txt">
+            <p><span>Submit us a suggestion</span></p>
+        </div>
+        <form name="register-form">
+            <div class="list">
+     
+                <label class="item item-input">
+                    <input ng-model="user.l_name" type="text" placeholder="Your Full Name">
+                </label>
+       
+                <label class="item item-input">
+                    <input ng-model="user.email" type="email" placeholder="Email Address">
+                </label>
+                <div class="select">
+                    <span class="arr"></span>
+                    <select ng-model="user.subject" ng-options="company.val as company.name for company in subjectList">
+                        <option value="">Subject</option>
+                    </select>
+                </div>
+                <label class="item item-input">
+                    <textarea class="area" ng-model="user.message"  placeholder="Message"></textarea>
+                </label>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button button-block button-assertive regsiter-btn" ng-click="contactus()">CONTACT US</button>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,41 @@
+//will open in app browser
+//var options = {
+//    location: 'yes',
+//    clearcache: 'no',
+//    toolbar: 'yes'
+//};
+//$cordovaInAppBrowser.open('http://food.bizitogo.com/cvv.html', '_blank', options)
+//    .then(function(event) {
+//        // success
+//    })
+//    .catch(function(event) {
+//        // error
+//        $ionicPopup.alert({
+//            title: 'Alert',
+//            template: 'load error'
+//        });
+//    });
+
+/*
+Payment.submitToConverge(
+    $scope.payment_form,
+    function (result) {
+        //if(!result.errorCode){
+        //    var txn_id = '';
+        //    $scope.submit();
+        //}else{
+        //    $ionicPopup.alert({
+        //        title: result.errorName,
+        //        template: result.errorMessage
+        //    });
+        //}
+        $scope.submit();
+    },
+    function (result) {
+        $ionicPopup.alert({
+            title:'Error',
+            template: 'Payment request error!'
+        });
+    }
+);
+*/

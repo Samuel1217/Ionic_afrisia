@@ -1,0 +1,53 @@
+@import "env";
+@import "color";
+@import "variables";
+@import "font";
+
+
+/*==============================================
+ *  Intro page
+===============================================*/
+.intro-view {
+  background-color: @bg-color;
+  padding: @block-space;
+  padding-bottom: 100px;
+  .slider {
+    height: 100%;
+  }
+  .slider-slide {
+    padding-top: 80px;
+    color: @white;
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    h3, h5 {
+      color: @white !important;
+    }
+  }
+  .button {
+    background-color: @dark-blue;
+    color: @white;
+    width: 200px;
+    margin: 0 auto;
+  }
+}
+
+/*==============================================
+ *  Phone Validation page
+===============================================*/
+.verify-view {
+  background-color: @bg-color;
+  h2, h3, h5, p {
+    color: @white;
+  }
+  .card, .list-inset {
+    border-radius: @radius;
+  }
+}
+
+/*==============================================
+ *  Recovery Password page
+===============================================*/
+.recovery-view {
+  .verify-view
+}

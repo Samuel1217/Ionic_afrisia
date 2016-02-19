@@ -1,0 +1,40 @@
+
+-----------------API call-----------------
+
+$ionicLoading.show({template:'Loading...'});
+APIService.orderDetail(
+    $scope.user,
+    function (succ) {
+        $ionicLoading.hide();
+        // Do success
+        if(!succ.description.error){
+        //sucess
+        }else{
+        //error
+            $ionicPopup.alert({
+                    title:succ.message,
+                    template: succ.description.error
+                });
+        }
+    }, function (err) {
+        $ionicLoading.hide();
+        $ionicPopup.alert({
+            title:'Info',
+            template: JSON.stringify(err)
+        });
+    }
+);
+
+
+try{
+
+}catch (err){
+    $ionicLoading.hide();
+    $ionicPopup.alert({
+        title: 'Alert',
+        template: err.message
+    });
+}
+
+
+

@@ -1,0 +1,49 @@
+    1. No message is being displayed when a user changes his restaurant or resort that his cart would be emptied in this doing action.
+     Show this message - "Your cart would be emptied on changing resort/restaurant. Are you sure you want to proceed ?"
+(fixed)
+     2. Unable to load signup page. When trying to register, the system quickly sends user to the registration page to input personal information then quickly sends user back to original page. Please fix. The signup page with all 4 buttons is not coming.
+(?)
+     3. Increase the size of the logo images on the resort listing screen by 20%.
+(fixed)
+     4. Increase the size of the logo on the restaurant listing page by 20%.
+(fixed)
+     5. Put back the criterion of $15 for Lunch and $25 for Dinner as minimum amount of the order which we had put earlier as well.
+(fixed)
+     6. If a user wants to delete an item from his cart then first show a popup to user confirming his delete and then delete the item. Currently as soon as i click the delete icon it removes the item from the cart.
+(fixed)
+     7. All categories of restaurant are not visible in the menu listing page.
+(?)
+     8. I am able to select any number of sides and options for any menu item. It should not happen. There is a field called "Limit for sides" and "limit for options" coming in API which tells how many max. sides and option a user can select for a particular dish. Correct it.
+(fixed)
+     9. Show description of sides and options also just below their names in all menu items.
+(?)
+     10. When i am on order summary page and I delete an item from my cart or update its quantity then the calculation goes for incorrect and it starts showing incorrect value. Correct it.
+(?)
+     11. When i exit the application then kill all data and user session and start the app afresh when i open it next time. Also give a confirmation message to user asking "Do you want to exit and close the application ? All your cart data will be lost"
+(?)
+     12. On the Billing Detail page change header name to "Billing Details" and also the "?" icon which is there in front of CVV just add hover text as it is there on the website.
+(fixed)
+     13. Location field on the billing details page should not be editable.
+(fixed)
+     14. Take all fields on the billing details page as it is there on the website. Compare it with fields on the website and make it exactly same.
+(fixed,but not complete payment part)
+     15. Change highlighting of the selected menu item from blue to grey and change highlighting of selected category from grey to blue.
+(fixed)
+     16. Show Veg/Non-Veg icon in front of Menu Item Name as well. (Green/ Red Dot)
+(fixed)
+     17. See the Texas Roadhouse Restaurant. There is no "More" option coming in the Menu category hence i am not able to see all menu categories. Correct it.
+
+     18. Update profile is not working properly. I am unable to update my password.
+
+     19. I am sending you across the payment integration details in another email. Integrate the payment system as well.
+
+     20. Update the Terms and Conditions and privacy policy text from the website (food.bizitogo.com)
+(fixed)
+     21. In order history the step circles is not changing when i am changing the order status from backend admin panel.
+
+     food.bizitogo.com/admin
+
+     Username : admin
+     Password : admin
+
+

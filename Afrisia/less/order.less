@@ -1,0 +1,301 @@
+@import "env";
+@import "color";
+@import "variables";
+
+/*=============================================
+ * Order View
+ *=============================================*/
+.order-view{
+  .has-header{
+    top: @nav-height + @subnav-height + @iphone-top !important;
+    position: absolute !important;
+  }
+  .right-arrow-item .item-content{
+    padding: 0 30px 0 0 !important;
+  }
+  .item-content{
+    padding: 0;
+    .row{
+      overflow: hidden;
+      .col{
+        line-height: normal;
+      }
+    }
+    span{
+      line-height: 14px;
+      overflow: hidden;
+      white-space: normal;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+    }
+    .order-title{
+      font-size: 24px;
+      font-weight: bold;
+      color: @subnav-color;
+      margin: 0;
+    }
+    .order-datetime{
+      font-size: 10px;
+      width: 45px;
+      overflow: hidden;
+      white-space: normal;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      word-break: keep-all;
+      word-wrap: break-word;
+      line-height: 16px;
+      margin: 0 auto;
+    }
+    .order-restr-name{
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 24px;
+    }
+    .first{
+      text-align: center !important;
+    }
+    .third{
+      padding-top: 31px !important;
+      text-align: right;
+    }
+    .fourth{
+      padding-top: 12px !important;
+    }
+    .fifth{
+      padding-top: 16px !important;
+      text-align: right;
+    }
+  }
+  .pre-input{
+    line-height: 32px;
+  }
+  .tip-input{
+    width: 80% !important;
+    float: right;
+  }
+  .valid-card-mark{
+    position: relative;
+    top: 3px;
+    font-size: 32px;
+    color: green;
+  }
+  .cvv-info-mark{
+    position: relative;
+    top: 5px;
+    font-size: 30px;
+    color: @text-color;
+  }
+  .cvv-input{
+    width: 80px;
+    display: inline;
+  }
+  .icon.ion-help-circled{
+    font-size: 30px;
+    position: relative;
+    top: 4px;
+  }
+  .r0{
+    color: @white !important;
+  }
+  .r1{
+    border-bottom: 2px solid @bg-color !important;
+    .r11{
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      .col{
+        p{
+          padding-left: 24px;
+        }
+      }
+    }
+  }
+  .r2{
+    color: @white !important;
+    background-color: @subnav-color !important;
+    line-height: 16px;
+    .text-right{
+      padding-right: 15px;
+    }
+  }
+  .r3{
+    padding: 20px 0 !important;
+    .col{
+      position: relative;
+    }
+    p{
+      font-weight: 600;
+    }
+    .state-mark{
+      width: 32px;
+      height: 32px;
+      margin: 0 auto;
+      line-height: 28px;
+      color: @black;
+      border-radius: 100%;
+      background-color: @white;
+      border: 2px solid @bg-color;
+    }
+    .state-mark.status_0{
+      color: @white;
+      background-color: @subnav-color;
+    }
+    .state-mark.status_1{
+      color: @black;
+      background-color: @white-bg;
+    }
+    .state-mark.status_2{
+      color: @white;
+      background-color: @bg-color;
+    }
+    .state-mark.status_3{
+      color: @subnav-color;
+      background-color: @white;
+    }
+    .state-mark.status_4{
+      color: @subnav-color;
+      background-color: @white-bg;
+    }
+    .state-mark.past{
+      color: @white !important;
+      background-color: @subnav-color !important;
+    }
+
+
+    .state-arrow{
+      position: absolute;
+      top: 16px;
+      right: -25%;
+      width: 40%;
+      height: 10px;
+      background: url(../img/track_arrow.png) no-repeat;
+      -webkit-background-size: contain;
+      -moz-background-size: contain;
+      background-size: contain;
+    }
+  }
+  .r4{
+    padding-right: 0 !important;
+  }
+  .r5{
+    margin: 0 auto 10px;
+    width: 36px;
+    height: 36px;
+    padding: 2px !important;
+    border-radius: 100%;
+  }
+  .r5.selected {
+    -webkit-animation: pulse-border 1s infinite;
+  }
+  .item {
+    p{
+      color: @black !important;
+    }
+  }
+  .item-icon-right .icon-accessory{
+    color: @black !important;
+  }
+  .order-state{
+    color: @black !important;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .order-state.status_0{
+    background-color: yellow;
+  }
+  .order-state.status_1{
+    background-color: #fa3305;
+  }
+  .order-state.status_2{
+    background-color: #f50711;
+  }
+  .order-state.status_3{
+    background-color: #319a10;
+  }
+  .order-state.status_4{
+    background-color: #2b3126;
+  }
+  .order-item{
+    border: none;
+    border-bottom: 2px solid @bg-color;
+    padding: 16px 0;
+    p{
+      em{
+        color: @black;
+        font-weight: 600;
+      }
+    }
+    .order-item-actions{
+      .button{
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        min-height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+        border-radius: 100%;
+        border-width: 2px;
+        color: @title-black;
+        border-color: @title-black;
+        .icon{
+          top: -1px;
+          right: 6px!important;
+          position: relative;
+        }
+      }
+      .button .icon:before, .button.icon-left:before, .button.icon-right:before, .button.icon:before{
+        line-height: 30px;
+        font-size: 20px;
+      }
+
+      .button.item-edit-btn{}
+      .button.item-remove-btn{}
+    }
+    .order-item-title{
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 30px;
+    }
+  }
+  .order-item:last-child{
+    border-bottom-width: 1px;
+  }
+  .sum{
+    margin-top: 50px !important;
+    .item{
+      border-color: fadeout(@white, 60%);
+      background-color: fadeout(@subnav-color, 20%);
+      color: @white;
+      height: 30px !important;
+      line-height: 0 !important;
+    }
+    .em{
+      font-weight: bold;
+    }
+    .item-note{
+      color: @white;
+    }
+  }
+  .black-bold{
+    font-weight: bold;
+    color: @black !important;
+  }
+  .red-bold{
+    font-weight: bold;
+    color: @red !important;
+  }
+  .cart-empty{
+    margin: 0 auto;
+    text-align: center;
+    img{
+      margin: 0 auto;
+      width: 100px;
+      height: auto;
+    }
+  }
+  @-webkit-keyframes pulse-border {
+    from, to { box-shadow: 0 0 0 1px #ff001f;}
+    50% { box-shadow: 0 0 0 2px #ffa2c8; }
+  }
+}

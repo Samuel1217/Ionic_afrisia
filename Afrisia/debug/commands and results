@@ -1,0 +1,49 @@
+
+//------------- Facebook plugin install --------------------
+cordova -d plugin add  /data/cordova/plugins/phonegap-facebook-plugin-master/ --variable APP_ID="1675060212725720" --variable APP_NAME="BizitoGo"
+
+keytool -exportcert -alias androiddebugkey -keystore %HOMEPATH%\.android\debug.keystore | openssl sha1 -binary | openssl base64
+
+//------------- Debug key generate ----------------
+C:\Program Files\Java\jdk1.8.0_40\bin>keytool -exportcert -alias androiddebugkey -keystore C:/Users/Administrator/.android/debug.keystore | openssl sha1 -binary | openssl base64
+
+A9:DA:14:E2:D3:B0:4A:22:75:16:B0:F4:B1:08:2E:FE:1D:68:57:62
+
+833224562116-fgeua2ac0ianp69873plganphcipt240.apps.googleusercontent.com
+
+//------------- Google project for Google+ signin ---------------------
+C:\>keytool -exportcert -alias bizitogoapp -keystore %HOMEPATH%\.android\bizitogo.keystore -list -v
+Enter keystore password: bizitogo
+Certificate fingerprints:
+         MD5:  48:91:3E:C6:41:72:5A:5A:D5:17:A4:81:D1:6A:F9:83
+         SHA1: E9:DA:5B:B0:1F:10:14:F3:24:A4:C1:C2:C5:2A:0F:C2:87:78:D3:6E
+         SHA256: 3F:7C:19:DC:E1:E8:85:80:6C:83:25:9F:B6:37:BF:67:ED:DA:8F:3C:50:2A:46:B9:BA:1D:97:E2:81:1B:E0:12
+         Signature algorithm name: SHA256withRSA
+         Version: 3
+
+//-------Google developer console project --------------------
+833224562116-vu83hjlj2il5jrqdi3vhgicvo62psnfv.apps.googleusercontent.com
+
+//------------- Google+ plugin install ---------------------
+cordova plugin add cordova-plugin-googleplus --variable REVERSED_CLIENT_ID=833224562116-fgeua2ac0ianp69873plganphcipt240.apps.googleusercontent.com
+
+
+cordova plugin add cordova-plugin-googleplus --variable REVERSED_CLIENT_ID=com.googleusercontent.apps.833224562116-0vvn98au6v2udovdhmb9u1mrmabrvjj5
+==========================Make signed apk=============================================
+E:> cordova build --release android
+//------------- jarsigner sign ---------------------
+E:> jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore bizitogo.keystore platforms\android\build\outputs\apk\android-release-unsigned.apk bizitogoapp
+
+/** Do remeber **/
+if you encounter unable this command error,please add C:\Program Files\Java\jdk1.8.0_40\bin to your system path
+
+//------------- Zipalign sign ---------------------
+cd I:\Develop Tools\AndroidTools\android-sdk-windows\build-tools\22.0.1 zipalign -v 4 E:\fenmingyu-github\BiziToGo\platforms\android\build\outputs\apk\android-release-unsigned.apk E:\fenmingyu-github\BiziToGo\platforms\android\build\outputs\apk\BiziToGo.apk
+
+ > zipalign -v 4 F:\freelancer\BiziToGo\platforms\android\build\outputs\apk\android-release-unsigned.apk F:\freelancer\BiziToGo\platforms\android\build\outputs\apk\BiziToGo.apk
+I:\Develop Tools\AndroidTools\android-sdk-windows\build-tools\22.0.1
+
+
+//Proxy setup related commands
+npm install --save replace
+

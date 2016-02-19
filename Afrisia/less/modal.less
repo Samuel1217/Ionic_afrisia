@@ -1,0 +1,183 @@
+@import "env";
+@import "color";
+@import "variables";
+@import "font";
+
+/*============================================
+ * Modal View Style
+ ============================================*/
+@circle-btn-size:30px;
+@number-panel-btn-bg:#0f3876;
+@item-divider-color:#ef383f;
+.modal-view{
+  .bar-header{
+    color: @white;
+    .row{
+      padding: 0 !important;
+      border-bottom-width: 0 !important;
+      .col{
+        padding: 0 !important;
+        line-height: 32px;
+      }
+    }
+    h3{
+      color: #ffffff;
+    }
+    .d1{
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      word-break: break-all;
+      word-wrap: break-word;
+      i{
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        background-color: @white;
+        position: relative;
+        margin-right: 8px;
+        em{
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          text-align: center;
+          width: 10px;
+          height: 10px;
+          background-color: @bg-color;
+          border-radius: 50%;
+        }
+      }
+      .Veg{
+        em{
+          background-color: @bg-color;
+        }
+      }
+      .NonVeg{
+        em{
+          background-color: green;
+        }
+      }
+    }
+    .d2{
+      padding: 10px;
+    }
+    .d3{}
+  }
+  .button.circle-btn{
+    border-radius: 100%;
+    background-color: @white;
+    width: 36px;
+    height: 36px;
+    border: 2px solid @subnav-color;
+    top: 20px;
+    .icon{
+      font-weight: bold;
+      margin-left: -2px;
+      color: red;
+      font-size: 24px;
+    }
+    .icon:before{
+      line-height: @circle-btn-size !important;
+    }
+  }
+  .circle-btn.button-positive{
+    right:90px;
+  }
+  .order-amount{
+    position: absolute;
+    width: 36px;
+    top: 20px;
+    right: 54px;
+    text-align: center;
+  }
+  .number-panel{
+    position: relative;
+    margin: 0 auto;
+    width: 180px;
+    .circle-btn{
+      top: 0;
+      border-radius: 100%;
+      background-color: @number-panel-btn-bg;
+      width: @circle-btn-size;
+      height: @circle-btn-size;
+      min-width: @circle-btn-size;
+      min-height: @circle-btn-size;
+      border: none;
+      display: inline-block;
+      .icon{
+        color: #CACACA !important;
+        margin-left: 0px;
+        position: relative;
+        top: 0;
+        left: -@circle-btn-size/10;
+      }
+    }
+
+    .item-input{
+      width: 50px;
+      height: @circle-btn-size;
+      min-width: @circle-btn-size;
+      min-height: @circle-btn-size;
+      line-height: @circle-btn-size;
+      text-align: center;
+      display: inline-block;
+      padding: 3px 0 !important;
+      border-radius: 4px;
+      input{
+        padding: 0 !important;
+        text-align: center;
+        height: 16px;
+      }
+    }
+  }
+  .row{
+    border-bottom: 1px solid @lime-black;
+  }
+  .row+.row{
+    margin-top: 0;
+  }
+  .item-divider{
+    background-color: @bg-color;
+    h2{
+      color: @white;
+    }
+  }
+  .cart-option{
+    padding: 0;
+    height: 52px;
+    .col{
+      padding: 0;
+    }
+    .cart-option-chk{
+      margin: 0;
+      border: none;
+      padding: 0 0 0 50px;
+      background: none;
+      height: 52px;
+      .checkbox{
+        height: 52px;
+        padding: 0;
+      }
+      i.checkbox-icon{
+        top: 8px;
+      }
+      .item-content{
+        span{
+          line-height: 30px;
+        }
+        em{
+          display: block;
+          color: #B3B3B3;
+          line-height: 20px;
+        }
+      }
+    }
+    .cart-option-price{
+      padding: 15px;
+    }
+  }
+}

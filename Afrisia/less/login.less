@@ -1,0 +1,141 @@
+@import "env";
+@import "color";
+@import "variables";
+
+/*==============================================
+ *  Login page
+===============================================*/
+.login-view {
+  background-color: @bg-color;
+  .row {
+    padding: @block-space !important;
+  }
+
+  .login-img-wrap {
+    text-align: center;
+    width: 100%;
+    height: 120px;
+    background: url(@login-bg-image) no-repeat 100% 100%;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background-position: center;
+  }
+  .forgot-lnk, .signup-lnk {
+    color: @button-color;
+    padding: 0 @block-space;
+    font-size: 1.2em;
+    width: 100%;
+  }
+  .forgot-lnk {
+    text-align: right;
+  }
+  .signup-lnk {
+    text-align: center;
+  }
+  .login-form {
+    font-family: @font-family;
+
+    .sel-lang-wrap {
+      margin: 15px auto;
+      width: 200px;
+    }
+    input::-webkit-input-placeholder {
+      color: @bg-color;
+    }
+    .list {
+      border-radius: @radius;
+      font-weight: bold;
+      padding-bottom: 0;
+    }
+    .sel-lang {
+      background-color: white;
+      padding: 0 2px;
+      border-radius: @radius;
+      .button-outline {
+        border-color: @white !important;
+        border-width: 2px;
+        color: @bg-color !important;
+      }
+      .item:first-child {
+        border-top-left-radius: @radius !important;
+        border-bottom-left-radius: @radius !important;
+      }
+      .item:last-child {
+        border-top-right-radius: @radius !important;
+        border-bottom-right-radius: @radius !important;
+      }
+    }
+  }
+
+  .info-wrap {
+    border-radius: @radius;
+    .item {
+      padding: 6px 0 6px 32px;
+      border-radius: 0;
+    }
+    .item:first-child {
+      border-top-left-radius: @radius !important;
+      border-top-right-radius: @radius !important;
+    }
+    .item:last-child {
+      border-bottom-left-radius: @radius !important;
+      border-bottom-right-radius: @radius !important;
+    }
+    .placeholder-icon {
+      width: 36px;
+      font-size: 30px;
+      color: @bg-color;
+    }
+    .item:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .item-radio .item-content {
+    padding: 0px;
+    background: none;
+  }
+  .button {
+    color: @button-color;
+  }
+  .button-bar .button {
+    min-height: 0;
+    line-height: 30px;
+  }
+  .button-bar > .item-radio.button {
+    padding: 0;
+    border: 2px solid @white !important;
+    background-color: @white !important;
+  }
+  .item-radio input:checked ~ .item-content {
+    /* style the item content when its checked */
+    border-color: @bg-color;
+    background-color: @bg-color;
+    color: @white;
+  }
+
+  .item-radio .radio-icon {
+    display: none;
+  }
+
+  .button.button-positive.button-outline.active, .button.button-positive.button-outline.activated {
+    background-color: @bg-color;
+    box-shadow: none;
+    color: @white;
+    border-radius: 0;
+  }
+  .card .item:first-child .item-content, .list-inset .item:first-child .item-content, .padding > .list .item:first-child .item-content {
+    border-top-left-radius: @radius-inner;
+    border-bottom-left-radius: @radius-inner;
+  }
+  .card .item:last-child .item-content, .list-inset .item:last-child .item-content, .padding > .list .item:last-child .item-content {
+    border-top-right-radius: @radius-inner;
+    border-bottom-right-radius: @radius-inner;
+  }
+  .card .item:last-child, .list-inset .item:last-child {
+    margin-bottom: 1px;
+  }
+
+}

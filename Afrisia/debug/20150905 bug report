@@ -1,0 +1,49 @@
+iPhone App Issues :
+
+1. Unable to Login using "Continue as Guest" button. On clicking it shows You are Guest message and then stays on the same page.
+(complete)
+2. Email Registration not working. After filling all form data and clicking on Register button, then nothing happens.
+(complete)
+3. Dish Description is missing from the Popup.
+(complete)
+4. The close button on top right corner of popup is not working, so I am unable to close the popup.
+(complete)
+5. The selected sides and options is not visible on the order summary page.
+(complete)
+6.  In order history detail page the "options" value is not coming correctly. It is showing Options pricing in place of options name.
+    I have checked the API response for it. And API is returning correct data.
+(complete, API bad information,I have checked the API response for it ,please check order_id = 25)
+
+Android App Issues :
+
+1. In order history detail page the "options" value is not coming correctly. It is showing Options pricing in place of options name. I have checked the API response for it. And API is returning correct data.
+(complete, API bad information,I have checked the API response for it ,please check order_id = 25)
+
+
+Common points for both Builds :
+
+1. I have added a new field in restaurant listing API named "Open Days". Just show its value about Lunch and Dinner Timing in restaurant listing.
+(API not ready)
+2. Arrange all dishes, categories, sides and options in alphabetical order.
+(Server order needs)
+3. I am still able to select any number of options and sides for a particular dish.
+    There is a parameter named "sides_limit" and "options_limit" in dish listing API which would tell how many max. sides/options a user can select.
+(Check again)
+4. The selection of the category is not visible.
+(complete)
+5. On Order summary page the selected sides and options for a particular dish is not visible. Correct it !
+(Correct)
+6. Remove the time check for the restaurant that we have put. Now a user can place order at any given point of time.
+(complete)
+7. When i have created my order and then i go to change my resort/restaurant then my cart isn't getting empty. Correct it !
+(complete)
+8. When i create an order from one restaurant and then i change my restaurant/resort then the items in that restaurant still show the selected blue color of the previous order items.
+(complete)
+9. Remove the connect with Facebook option from the edit profile page.
+(complete)
+10. Even when i have registered through Fb/Google+ it shows a password in edit profile page. Correct it. The password field should be empty.
+(I will modify,but server does not download the password)
+11. When i logout from my profile and comes back to Login options screen then Continue as Guest option is not visible. Correct it !
+(complete)
+12. Even after logout if I press back button then I am able to login into profile again. It should not happen. Correct it !
+(complete)

@@ -1,0 +1,120 @@
+@import "env";
+@import "color";
+@import "variables";
+
+.register-view{
+  .logo-welcome {
+    width: 200px;
+    height: 162px;
+    margin: 10px auto 0;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+    text-align: center;
+    img{
+      width: auto;
+      height: 162px;
+    }
+  }
+  .welcome-txt{
+    text-align: center;
+    padding: 10px 20px 10px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    strong{
+      color: @text-color;
+    }
+    h2 {
+      position: relative !important;
+      margin-top: 0px !important;
+      font-size: 18px;
+      color: @text-color;
+      margin: 0 50px;
+    }
+
+    h2.three {
+      background: -moz-linear-gradient(#ffffff 0%, #ffffff 49%, #bbbbbb 50%, #A5A5A5  51%, #ffffff 52%, #ffffff 100%) !important;
+      background: -ms-linear-gradient(#ffffff 0%, #ffffff 49%, #bbbbbb 50%, #A5A5A5  51%, #ffffff 52%, #ffffff 100%) !important;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(49%, #ffffff), color-stop(50%, #bbbbbb), color-stop(51%, #A5A5A5 ), color-stop(52%, #ffffff), color-stop(100%, #ffffff)) !important;
+      background: -webkit-linear-gradient(#ffffff 0%, #ffffff 49%, #bbbbbb 50%, #A5A5A5  51%, #ffffff 52%, #ffffff 100%) !important;
+      background: -o-linear-gradient(#ffffff 0%, #ffffff 49%, #bbbbbb 50%, #A5A5A5  51%, #ffffff 52%, #ffffff 100%) !important;
+      background: linear-gradient(#ffffff 0%, #ffffff 49%, #bbbbbb 50%, #A5A5A5  51%, #ffffff 52%, #ffffff 100%) !important;
+    }
+
+    h2.three span {
+      color: @subnav-color;
+      background: #fff !important;
+      padding: 0 20px !important;
+      position: relative !important;
+      z-index: 5000 !important;
+    }
+  }
+  .upload-avatar-row{
+    height: 75px !important;
+  }
+  .upload-result-img{
+    width: @leftmenu-avatar-size/3*2;
+    height: @leftmenu-avatar-size/3*2;
+    border-radius: 100%;
+    box-shadow: 1px 1px 3px 1px #B1B1B1;
+    margin-left: 30px;
+  }
+  .upload-btn,.regsiter-btn{
+    height: 36px !important;
+    line-height: 32px !important;
+    min-height: 36px !important;
+    font-size: 16px;
+    background-color: @subnav-color !important;
+    margin: 15px 0 !important;
+  }
+  [name="register-form"]{
+    padding: 0 20px;
+  }
+  .item.item-input{
+    margin-top: 10px;
+  }
+  .row{
+    padding: 0;
+    .col{
+      padding: 0;
+    }
+  }
+  .thin-border{
+    border: 1px solid @text-color;
+    padding: 15px 20px 5px;
+    margin: 10px 0 25px;
+//    text-align: center;
+    border-radius: @radius/2;
+    font-size: 12px;
+    line-height: 15px;
+    strong{
+      color: @subnav-color;
+    }
+  }
+
+  .select{
+    width: 100%;
+    select{
+      width: 100%;
+      border: 1px solid @input-border-color;
+      padding: 13px 30px 12px 5px;
+      margin: 0 0 0 -1px;
+    }
+    .arr{
+      background: #BDBDBD;
+      right: -1px;
+    }
+    .arr:after{
+      border-top: 6px solid #BDBDBD;
+    }
+  }
+  .item.back{
+    margin-top: 10px;
+    border:none !important;
+  }
+  .contact-desc-box{
+    margin: 0 auto;
+    padding: 10px;
+  }
+}

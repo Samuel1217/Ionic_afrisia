@@ -1,0 +1,279 @@
+<ion-view title='<h4 style="margin-top:12px;font-weight: 500; color: #96c424;">{{active_business.business_name}}</h3>' class="comment-view leavecomment-view" hide-nav-bar="false" ng-init="init()">
+
+        <!--<button class="button icon ion-ios-arrow-back subnav-back" ng-click="goBack()"></button>-->
+
+    <ion-nav-bar class="bar-positive">
+            <!--<ion-nav-back-button  class="button-clear"><i class="ion-ios-arrow-back"></i>-->
+            <!--</ion-nav-back-button>-->
+
+        <ion-nav-buttons side="left">
+               <button class="button button-icon button-clear" ng-click="goBack()">
+                  <img class="back-button-img" src="img/back_button.png">
+               </button>   
+        </ion-nav-buttons>
+            
+         
+
+        <ion-nav-buttons side="right">
+      
+            <button class="button button-icon button-clear" ng-click="goSingleMap()">
+               <img style="margin-left: 10px; width: 20px; height: 22px;margin-top: 5px;" src="img/icon-map.png" >
+            </button>
+        </ion-nav-buttons>
+              
+    </ion-nav-bar>
+   
+     
+    <ion-content style="background-color: #ededed;">
+        
+         <div class="slide-container">
+            <img class="item-img" ng-src="{{active_business.business_photo_url}}">
+            <div class="overlay_theme">
+                
+                <div class="row">
+                    <div class="col col-50">
+                    <div class="type-name">
+                        [TYPE]
+                    </div>
+                    
+                
+                    </div>
+                    <div class="col">
+                        
+                       
+                        <img class="favorit-mark" src="img/favorit-mark.png">
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="label-name">
+                        [label 1] 
+                    </div>
+                        <div class="label-name">
+                        [label 2] 
+                    </div>
+                            <div class="label-name">
+                        [label 1] 
+                    </div>
+                        <div class="label-name">
+                        [label 2] 
+                    </div>
+                            <div class="label-name">
+                        [label 1] 
+                    </div>
+            
+                </div>
+            </div>
+            <div>
+                <div style="float: left;">
+                    <img class="circle-mark" >
+                </div>
+                <div class="project-number">
+                    <p>{{active_business.business_rate_score}}</p>
+                </div>
+                <div class="rate-number">
+                    <p>,{{active_business.business_rate_num}}
+                    </p>
+                </div>
+                <div class="total">
+                    <p>/10
+                    </p>
+                </div>
+                <div class="comment-number">
+                    <p>{{active_business.business_comment.length}}</p>
+                </div>
+                <div class="comment">
+                    <p>comments</p>
+                </div>
+                <div class="divider">
+                    <p>|</p>
+                </div>
+                <div class="comment-click" ng-click="goLeaveComment()">
+                    <p>Leave comments</p>
+                </div>
+             </div>
+   
+      
+     
+         </div>
+         <div class="text-box">
+             <div class="title">
+                 {{active_business.business_site}}
+             </div>
+             <div class="text" style="line-height: 20px;">
+                <p><strong>{{active_business.business_name}}</strong>
+                    {{active_business.business_description}}
+                    
+                </p>           
+             </div>
+             <div class="label-votes">
+                <div class="row">
+                    <div class="vote-name">
+                         [Label1]
+                    </div>
+                     <div class="vote-num">
+                         - 18 votes 
+                    </div>
+                    <div class="r_num">
+                         5
+                    </div>
+                    <div class="t_num">
+                         /5
+                    </div>             
+                              
+                </div>
+                <div class="row">
+                    <div class="vote-name">
+                         [Label1]
+                    </div>
+                     <div class="vote-num">
+                         - 18 votes 
+                    </div>
+                    <div class="r_num">
+                         5
+                    </div>
+                    <div class="t_num">
+                         /5
+                    </div>             
+                              
+                </div>
+                <div class="row">
+                    <div class="vote-name">
+                         [Label1]
+                    </div>
+                     <div class="vote-num">
+                         - 18 votes 
+                    </div>
+                    <div class="r_num">
+                         5
+                    </div>
+                    <div class="t_num">
+                         /5
+                    </div>             
+                              
+                </div>
+                <div class="row">
+                    <div class="vote-name">
+                         [Label1]
+                    </div>
+                     <div class="vote-num">
+                         - 18 votes 
+                    </div>
+                    <div class="r_num">
+                         5
+                    </div>
+                    <div class="t_num">
+                         /5
+                    </div>             
+                              
+                </div>
+                <div class="row">
+                    <div class="vote-name">
+                         [Label1]
+                    </div>
+                     <div class="vote-num">
+                         - 18 votes 
+                    </div>
+                    <div class="r_num">
+                         5
+                    </div>
+                    <div class="t_num">
+                         /5
+                    </div>             
+                              
+                </div>
+             </div>
+            
+            
+         </div>
+         <div class="share-box">
+             <div class="share-label">
+                 SHARE
+             </div>
+             <img style="margin-top: 0px; padding-bottom: 10px; margin-left: 10px; width: 15px; padding-top:0px;" ng-src="img/forward-arrow.png"/>
+             <img style="margin-top: 15px; margin-left: 10px; width: 45px;" ng-src="img/facebook.png"/>
+             <img style="margin-top: 15px; margin-left: 10px; width: 45px; " ng-src="img/twitter.png"/>
+             <img style="margin-top: 15px; margin-left: 10px; width: 45px;" ng-src="img/linkedin.png"/>
+         </div>
+          <div class="button-container">
+            <form>             
+                <button  class="button button-block button-assertive" ng-click="goAddOpinion()">
+                    Leave Comment
+                </button>
+                <div class="labels">- Most Recent Views -</div>
+            </form>
+        </div>
+        <div class="comment-container" ng-repeat="item in active_business.business_comment">
+            <div class="text-box">
+
+                <div class="row">
+                
+                    <div class="col col-75">
+                        <div class="photo-container">
+                            <div class="photo-circle1">
+                                <div class="photo-circle2">
+                                    <img class="img1" ng-src="{{item.user_photo_url}}"">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="person-name">
+                        <strong>{{item.user_name}}</strong>
+                            <div class="date">
+                        
+                                <p>{{item.comment_date}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div style="float:left;">
+                            <img class="circle-mark">
+                        </div>
+                        
+                        <div class="project-number">
+                            {{item.comment_rate_score}}
+                        </div>
+                        <div class="rate-number">
+                            ,{{item.comment_rate_num}}
+                        </div>
+                        <div class="total">
+                            /10
+                        </div>                     
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class="title">
+                        <p>{{item.comment_title}}</p>
+                    </div>
+                </div>
+          
+                <div class="row">
+                    <div class="text">
+                        <p>{{item.comment_content}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label" ng-click="goLabelComment()">
+                        [Label1]
+                     
+                    </div>
+                    
+                     <div class="label">
+                        [Label2]
+                     
+                    </div> 
+                    <div class="label" ng-click="goLabelComment()">
+                        [Label3]
+                     
+                    </div>
+            
+                </div>
+                 <div class="row">
+                    <div class="vote-plus">
+                        ...Vote+
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+
+    </ion-content>
+</ion-view>

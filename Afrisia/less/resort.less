@@ -1,0 +1,117 @@
+@import "env";
+@import "color";
+@import "variables";
+
+/*=============================================
+ * Resort List View
+ *=============================================*/
+.resort-view{
+  .item-content{
+    color: white !important;
+    height: 125px;
+    background-position: center top;
+    span{
+      position: absolute;
+      line-height: 24px;
+      font-size: 12px;
+    }
+    .name{
+      top: 10px;
+      left: 10px;
+      max-width: 75%;
+      font-size: 1.5rem;
+      padding: 10px;
+      color: white;
+    }
+    .logo{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 60px * 1.2;
+      height: auto;
+      max-height: 40px;
+      border-radius: 5px;
+    }
+    .address{
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      max-width: 80%;
+      overflow: hidden;
+      white-space: normal;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      word-break: keep-all;
+      word-wrap: break-word;
+      line-height: 16px;
+      padding-left: 16px;
+      .icon{
+        font-size: 16px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    .phone{
+      bottom: 10px;
+      right: 10px;
+      width: 32px;
+      height: 32px;
+      background-color: @subnav-color;
+      text-align: center;
+      font-size: 28px;
+      border-radius: 16px;
+      border: 2px solid @subnav-color;
+    }
+    .share-btn{
+      position: relative;
+    }
+  }
+
+  .item-content:before {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    opacity: 0 !important;
+    background: rgba(0,0,0,0.5) !important;
+    -moz-transition: opacity 0.25s !important;
+    -webkit-transition: opacity 0.25s !important;
+    transition: opacity 0.25s !important;
+    z-index: -1;
+  }
+
+  .item-content.activated:before {
+    opacity: 1 !important;
+  }
+  .has-header{
+    top: @nav-height + @iphone-top + @subnav-height !important;
+    position: absolute !important;
+    margin-top: -2px !important;
+  }
+  .resort{
+    .item-content-wrap{
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      background-color: @dark-effect-bg-color; // fallback
+      background: -moz-linear-gradient(top, @dark-effect-start-color, @dark-effect-end-color) !important; // FF 3.6+
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(@dark-effect-start-color), to(@dark-effect-end-color)) !important; // Safari 4+, Chrome 2+
+      background: -webkit-linear-gradient(top, @dark-effect-start-color, @dark-effect-end-color) !important; // Safari 5.1+, Chrome 10+
+      background: -o-linear-gradient(top, @dark-effect-start-color, @dark-effect-end-color) !important; // Opera 11.10
+      background: linear-gradient(to bottom, @dark-effect-start-color, @dark-effect-end-color) !important; // Standard, IE10
+
+      .image-loader-container{
+        text-align: center !important;
+      }
+    }
+    .item-content{
+      padding: 0;
+    }
+  }
+}

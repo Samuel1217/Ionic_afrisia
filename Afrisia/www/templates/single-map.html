@@ -1,0 +1,35 @@
+<ion-view title='<h4 style="margin-top:13px;font-weight: 500; color: #96c424;">{{active_business.business_name}}</h4>' class="singlemap-view" hide-nav-bar="false" ng-init="init()">
+
+        <!--<button class="button icon ion-ios-arrow-back subnav-back" ng-click="goBack()"></button>-->
+
+    <ion-nav-bar class="bar-positive">
+            <!--<ion-nav-back-button  class="button-clear"><i class="ion-ios-arrow-back"></i>-->
+            <!--</ion-nav-back-button>-->
+
+        <ion-nav-buttons side="left">
+               <button class="button button-icon button-clear" ng-click="goBack()">
+                  <img class="back-button-img" src="img/back_button.png">
+               </button>   
+        </ion-nav-buttons>
+            
+         
+
+        <!--<ion-nav-buttons side="right">
+      
+            <button class="button button-icon button-clear" ng-click="goBack()">
+               <img style="margin-left: 10px; width: 20px; height: 22px;margin-top: 5px;" src="img/comment.png" >
+            </button>
+        </ion-nav-buttons>-->
+              
+    </ion-nav-bar>
+  
+     
+     <ion-content scroll="false">
+
+
+         <map on-create="mapCreated(map)" data-tap-disabled="true">
+             
+         </map>  
+         
+     </ion-content>
+</ion-view>

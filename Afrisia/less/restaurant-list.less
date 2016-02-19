@@ -1,0 +1,259 @@
+@import "env";
+@import "color";
+@import "variables";
+@import "font";
+
+/*===================================
+ * Restaurant List Page
+ *==================================*/
+
+@slider-height: 140px;
+
+.restlist-view{
+  .has-header{
+    top: @subnav-height + @nav-height + @iphone-top + @slider-height !important;
+    position: absolute !important;
+    margin-top: 0 !important;
+  }
+  .slider {
+    height: @slider-height;
+    top: @subnav-height + @nav-height + @iphone-top !important;
+    border-bottom: 5px solid @bg-color;
+  }
+  .slider-slide {
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    .box{
+      width: 100%;
+      height: 100%;
+
+      .box-content{
+        background-size: cover;
+        .item-content-wrap{
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          background-color: @dark-effect-bg-color; // fallback
+          background: -moz-linear-gradient(top, @dark-effect-start-color, @dark-effect-end-color) !important; // FF 3.6+
+          background: -webkit-gradient(linear, 0 0, 0 100%, from(@dark-effect-start-color), to(@dark-effect-end-color)) !important;; // Safari 4+, Chrome 2+
+          background: -webkit-linear-gradient(top, @dark-effect-start-color, @dark-effect-end-color) !important;; // Safari 5.1+, Chrome 10+
+          background: -o-linear-gradient(top, @dark-effect-start-color, @dark-effect-end-color) !important;; // Opera 11.10
+          background: linear-gradient(to bottom, @dark-effect-start-color, @dark-effect-end-color) !important;; // Standard, IE10
+        }
+        h2{
+          color: @white;
+        }
+        .call-btn{
+          width: 32px;
+          height: 32px;
+          min-width: 32px;
+          min-height: 32px;
+          border-radius: 100%;
+          right: 5px;
+          bottom: 5px;
+          position: absolute;
+          background-color: @bg-color;
+          .icon{
+            position: relative;
+            top: -5px;
+            left: -5px;
+          }
+        }
+        .share-btn{
+          width: 32px;
+          height: 32px;
+          min-width: 32px;
+          min-height: 32px;
+          border-radius: 100%;
+          right: 40px;
+          bottom: 5px;
+          position: absolute;
+          background-color: @bg-color;
+          .icon{
+            position: relative;
+            top: -5px;
+            left: -9px;
+          }
+        }
+        .rest-name{
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          color: @white;
+          font-size: 24px;
+          padding-right: 80px;
+        }
+        .rest-logo{
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          img{
+            width: 60px * 1.2;
+            height: 40px * 1.2;
+          }
+        }
+        .rest-address{
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          overflow: hidden;
+          white-space: normal;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          word-break: break-all;
+          word-wrap: break-word;
+          line-height: 16px;
+          min-height: 20px;
+          padding-left: 16px;
+          padding-right: 10px;
+          font-size: 12px;
+          max-width: 240px;
+          text-align: left;
+          .icon{
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: @white;
+          }
+          span{
+            color: @white;
+          }
+        }
+
+      }
+    }
+  }
+  .gallery{
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 2.5px;
+    .box{
+      width: 100%;
+      height: 100%;
+      .box-content{
+        background-size: cover;
+        .item-content-wrap{
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          background-color: #444; // fallback
+          background: -moz-linear-gradient(top, @dark-effect-start-color, @dark-effect-end-color) !important; // FF 3.6+
+          background: -webkit-gradient(linear, 0 0, 0 100%, from(@dark-effect-start-color), to(@dark-effect-end-color)) !important;; // Safari 4+, Chrome 2+
+          background: -webkit-linear-gradient(top, @dark-effect-start-color, @dark-effect-end-color) !important;; // Safari 5.1+, Chrome 10+
+          background: -o-linear-gradient(top, @dark-effect-start-color, @dark-effect-end-color) !important;; // Opera 11.10
+          background: linear-gradient(to bottom, @dark-effect-start-color, @dark-effect-end-color) !important;; // Standard, IE10
+
+          .image-loader-container{
+            text-align: center !important;
+          }
+        }
+      }
+    }
+    .col{
+      padding: 2.5px;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    .fav-btn{
+      position: absolute;
+      text-align: center;
+      width: 32px;
+      height: 32px;
+      top: 5px;
+      right: 0;
+      .icon{
+        font-size: 24px;
+        color: @white;
+      }
+    }
+    .rest-name{
+      position: absolute;
+      top: 42px;
+      left: 5px;
+      color: @black;
+      font-size: 18px;
+      line-height: 18px;
+      height: 20px;
+      overflow: hidden;
+      word-break: break-all;
+      word-wrap: break-word;
+      white-space: nowrap;
+      width: 80%;
+      text-overflow: ellipsis;
+    }
+    .rest-logo{
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      img{
+        width: 40px * 1.2;
+        height: 30px * 1.2;
+      }
+    }
+    .rest-address{
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      overflow: hidden;
+      white-space: normal;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      word-break: break-all;
+      word-wrap: break-word;
+      line-height: 16px;
+      padding-left: 16px;
+      padding-right: 10px;
+      font-size: 12px;
+      .icon{
+        font-size: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: @black;
+      }
+      span{
+        color: @black;
+      }
+    }
+    .rest-timing{
+      position: absolute;
+      bottom: 6px;
+      left: 5px;
+      overflow: hidden;
+      white-space: normal;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      word-break: break-all;
+      word-wrap: break-word;
+      line-height: 16px;
+      font-size: 12px;
+      p{
+        position: relative;
+        margin-bottom:0px;
+        font-size: 10px;
+        .icon{
+          font-size: 16px;
+          position: absolute;
+          left: 1px;
+          top: 0;
+          color: @black;
+        }
+        span{
+          color: @black;
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+}

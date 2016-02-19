@@ -1,0 +1,132 @@
+<ion-view class="mycomment-view" title='<h3 style="margin-top:4px;font-weight: 500; color: #96c424;">My Comment</h3>'>
+    <ion-nav-bar class="bar-positive">
+        <!--<ion-nav-back-button  class="button-clear"><i class="ion-ios-arrow-back"></i>-->
+        <!--</ion-nav-back-button>-->
+
+        <ion-nav-buttons side="left">
+            <button class="button button-icon button-clear" ng-click="goBack()">
+                <img class="back-button-img" src="img/back_button.png">
+            </button>   
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    
+    <ion-content  has-bouncing="true" style="padding-top:80px;" >
+      <ion-list
+
+         show-reorder="data.showReorder">
+         <ion-item ng-repeat="item in items" class=" item-text-wrap" ng-href="#" ng-click="goComment(item)" >
+                               <!---->
+
+ <!---->
+             <img class="item-img" src="{{item.business_photo_url}}">
+             <div class="overlay_theme">
+                                                <!---->
+                  <div class="comment-container" >
+            <div class="text-box">
+
+                <div class="row">
+                
+                    <div class="col col-75">
+                        <div class="photo-container">
+                            <div class="photo-circle1">
+                                <div class="photo-circle2">
+                                    <img class="img1" ng-src="{{user_photo}}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="person-name">
+                            <div class="name">
+                        
+                                {{user_name}}
+                            </div>
+                        
+                            <div class="date">
+                        
+                                {{item.comment_date}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div style="float:left;">
+                            <img class="circle-mark">
+                        </div>
+                        
+                        <div class="project-number">
+                            {{item.comment_rate_score}}
+                        </div>
+                        <div class="rate-number">
+                            ,{{item.comment_rate_num}}
+                        </div>
+                        <div class="total">
+                            /10
+                        </div>                     
+                    </div>
+                </div>
+          
+                <div class="row">
+             
+                    
+                    <div class="text">
+                        <p class="title">{{item.comment_title}}</p>
+                        
+                        <p>{{item.comment_content}}</p>
+                   
+                    </div>
+              
+                </div>
+                <div class="row">
+                     <div class="vote">
+                         
+                        <p>...Vote+
+                    </div>
+                </div>
+            </div>
+<!---->
+            <div class="row">
+                   <div class="business-name">
+                       {{item.business_name}}
+                   </div>
+                  
+                   <img class="order-check" src="img/leaf.png">
+            </div>
+            <div class="row">
+                   <div class="col col-25">
+                   <div class="type-name">
+                       [TYPE]
+                   </div>
+                  
+               
+                 </div>
+                 <div class="col ">
+                     
+                     <div class="country-name">
+                       {{item.business_city}}
+                     </div>
+                     <img class="map-icon" src="img/map_direct.png">
+                 </div>
+            </div>
+              <div class="row">
+                    <div class="label-name">
+                       [label 1] 
+                   </div>
+                    <div class="label-name">
+                       [label 2] 
+                   </div>
+               </div>
+             
+             
+           <!---->
+       
+            <!---->
+            
+        </div>
+             
+   
+     
+         </ion-item>
+       </ion-list>
+   
+           
+
+    </ion-content>
+</ion-view>

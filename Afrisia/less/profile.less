@@ -1,0 +1,88 @@
+@import "env";
+@import "color";
+@import "variables";
+
+.profile-view{
+  .has-header{
+    //top: @subnav-height + @nav-height !important;
+    top: @subnav-height + @nav-height + @iphone-top !important;
+    position: absolute !important;
+    padding-top: 0;
+    margin-bottom: @nav-height;
+  }
+  .profile-container{
+    padding: 15px 60px;
+    background-color: @bg-color;
+    .profile-pic{
+      margin: 0 auto;
+      width: @leftmenu-avatar-size*1.4;
+      height: @leftmenu-avatar-size*1.4;
+      background-color: @white-bg;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 100%;
+      border: 4px solid @white;
+      margin-bottom: 10px;
+      position: relative;
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+      }
+    }
+    .fb-btn{
+      background-color: #3c5c95;
+      border-color: #3c5c95;
+      font-size: 12px;
+      line-height: 24px !important;
+      width: 180px;
+      height: 26px !important;
+      min-height: 24px !important;
+      margin: 0 auto;
+    }
+    .button.icon-left:before{
+      font-size: 16px;
+      line-height: 24px;
+      border-right: 1px solid #304873;
+      padding-right: 10px;
+    }
+    .edit-btn{
+      position: absolute;
+      bottom: 0px;
+      right: -30px;
+      background-color: @white-bg !important;
+      border: 2px solid @white;
+      color: @subnav-color;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      min-width: 30px;
+      min-height: 30px;
+      line-height: 30px;
+      border-radius: 100%;
+    }
+  }
+  .input-label{
+    em{
+      color: @subnav-color;
+    }
+  }
+  .item{
+    border-bottom-color: @subnav-color !important;
+    border-bottom-width: 2px !important;
+  }
+  .item:last-child{
+    border-bottom-width: 1px !important;
+  }
+  .bar.bar-assertive.bar-footer{
+    background-color: @bg-color !important;
+    text-transform: uppercase;
+    .icon{
+      font-size: 20px;
+    }
+  }
+  .logout-btn{
+    background-color: @bg-color !important;
+    border-color: @subnav-color !important;
+  }
+}

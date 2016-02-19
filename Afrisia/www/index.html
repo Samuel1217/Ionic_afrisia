@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html ng-app="ionicApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <title>BiziToGo</title>
+
+    <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+    <link href="lib/ionic-ion-drawer-master/ionic.contrib.drawer.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true"></script>
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+
+    <script src="lib/ionic-ion-drawer-master/ionic.contrib.drawer.js"></script>
+
+    <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+    <!-- Cookie manage -->
+    <script src="lib/angular-cookies/angular-cookies.min.js"></script>
+    <!-- Lazy image load -->
+    <script src="lib/ion-image-lazy-load/ionic-image-lazy-load.js"></script>
+    <!-- ngCordova -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <!-- ngStorage -->
+    <script src="lib/ngstorage/ngStorage.min.js"></script>
+    <!-- Angular resource -->
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <!-- XML parser -->
+    <script src="js/xml2json.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <script src="js/openfb.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <!--<script src="js/directives.js"></script>-->
+</head>
+
+<body>
+
+
+<ion-side-menus>
+
+    <ion-side-menu-content>
+
+        <ion-nav-view animation="slide-left-right"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left" ng-controller="NavCtrl" ng-init="init()">
+        <ion-header-bar class="bar bar-header bar-assertive">
+            <div class="left-menu-box">
+            <div class="left-menu-avatar">
+                <div class="avatar-wrap">
+                    <img ng-if="user_image" ng-src="{{ user_image}}" ng-click="goToProfile()" menu-close >
+                    <img ng-if="!user_image" src="img/profile-pic-default.png"   menu-close >
+                </div>
+              </div>
+                <p ng-if="loggedin"> {{ user_name }}</p>
+                <p ng-if="!loggedin"> PSEDUO </p>
+            
+            </div>
+        </ion-header-bar>
+        <ion-content has-bouncing="true">
+             <ion-refresher
+               pulling-text="Refresh..." 
+               on-refresh="doRefresh()">
+             </ion-refresher>
+
+            <ion-list>
+                <ion-item class="item-icon-left">
+            
+                    <button ng-if="!loggedin" class="login_btn" ng-click="login()" menu-close >
+                        <div style="float: left;">
+                               <img class="login_img" src="img/login_img.png" >
+                        </div>
+                        <div class="textbox">
+                            LOGIN
+                        </div>
+                    </button>
+                    <button ng-if="!loggedin" class="signup_btn button-block"  ng-click="signup() " menu-close>
+                       <div style="float: left;">
+                               <img class="signup_img" src="img/signup_img.png" >
+                        </div>
+                        <div class="textbox" >
+                            SIGN UP
+                        </div>
+                    </button>
+                    <div class="comment-row">
+                       
+                      <button ng-if="loggedin" class="button-clear" ng-click="goTomyInstall()" menu-close >
+                        <div class="comment-button"> My Business<span style="color : #ffffff;padding-left: 5px;">({{business_count}})</span></div>
+                      </button>
+                    </div>
+                    <div class="comment-row">
+                      <button ng-if="loggedin" class="button-clear" ng-click="goTomyComment()" menu-close >
+                        <div class="comment-button">My Comments<span style="color : #ffffff; padding-left: 5px;">({{comment_count}})</span></div>
+                      </button>
+                    </div>
+                    <div class="comment-row">
+                      <button ng-if="loggedin" class="button-clear" ng-click="goTomyfavorit()" menu-close >
+                        <div class="comment-button"> My Favorite<span style="color : #ffffff;padding-left: 5px;">({{favorit_count}})</span></div>
+                      </button>
+                    </div>                  
+                </ion-item>
+                <ion-item class="item-icon-left" >
+  
+                    <button class="contactus_btn"  ng-click="contact() " menu-close>
+                        <div style="float: left;">
+                            <img class="contactus_img" src="img/contactus_img.png" >
+                        </div>
+                        <div class="textbox">
+                            CONTACT
+                        </div>
+                    </button>        
+                </ion-item>
+                   <ion-item class="item-icon-left" ng-if="loggedin" >
+  
+                    <button class="logout_btn"  menu-close ng-click="logout() ">
+                        <div style="float: left;">
+                            <!--<img class="contactus_img" src="img/contactus_img.png" >-->
+                            <i class="icon ion-log-out logout_img"></i>
+                        </div>
+                        <div class="textbox">
+                           LOG OUT
+                        </div>
+                    </button>        
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+
+ 
+</ion-side-menus>
+</body>
+</html>

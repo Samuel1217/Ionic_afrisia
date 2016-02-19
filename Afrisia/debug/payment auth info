@@ -1,0 +1,82 @@
+- Account 1
+
+    Account ID: 005457
+    User ID: 005457
+    Password: x5="s}R5Xv-z-ChR
+
+    answer : dandong
+
+- Account 2
+  https://demo.myvirtualmerchant.com/VirtualMerchantDemo/login.do
+  https://demo.myvirtualmerchant.com/VirtualMerchantDemo/test_tran.do
+
+  Account ID: 007126
+  User ID: 007126
+  Password: Forever.30
+
+  ssl_merchant_id: 007126
+  ssl_user_id: webpage
+  ssl_pin: 32968K
+
+  Account ID:	    	700096
+  Merchant Name:	    	BIZITOGO
+  Terminal Name:	    	BIZITOGO
+  MID:	    	8028641853
+  Currency:	    	USD
+
+  Here are the answers to security questions :
+
+  First job - Air Canada
+  Last five ss - 62228
+  Color of first car - gold
+
+- Test Card number
+    378282246310005
+
+- Payment parameters
+
+    <txn>
+    <ssl_merchant_id>007126</ssl_merchant_id>
+
+    <ssl_pin>32968K</ssl_pin>
+
+    <ssl_user_id>webpage</ssl_user_id>
+
+    <ssl_test_mode>false</ssl_test_mode>
+
+    <ssl_transaction_type>ccsale</ssl_transaction_type>
+
+    <ssl_card_number>378282246310005</ssl_card_number>
+
+    <ssl_exp_date>0916</ssl_exp_date>
+
+    <ssl_amount>60.12</ssl_amount>
+
+    <ssl_description>Test Description</ssl_description>
+
+    <products>60.12::1::001::Test Description::</products>
+
+    <ssl_cvv2cvc2_indicator>1</ssl_cvv2cvc2_indicator>
+
+    <ssl_cvv2cvc2>005</ssl_cvv2cvc2>
+
+    <ssl_first_name>First</ssl_first_name>
+
+    <ssl_last_name>Last</ssl_last_name>
+
+    <ssl_company>TestCompany</ssl_company>
+
+    <ssl_avs_address>TEst address</ssl_avs_address>
+
+    <ssl_city>Paris</ssl_city>
+
+    <ssl_state>Paris</ssl_state>
+
+    <ssl_country>France</ssl_country>
+
+    <ssl_avs_zip>32487</ssl_avs_zip>
+
+    <ssl_phone>905-112-3332</ssl_phone>
+
+    <ssl_email>test@tt.com</ssl_email>
+    </txn>

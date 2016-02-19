@@ -1,0 +1,68 @@
+1. Once a user has logged in he should not be able to move back to the login/splash screen until he logs out.
+(complete)
+2. Add a "logout" option in the left menu.
+(complete)
+3. When a user login through Google+/FB account don't take him to Update profile page. Infact directly take him to the home page.
+(complete)
+4. When a user login through Guest Login then in the left menu following things would name :
+    a. Name of the user would be shown as "Guest User"
+    b. Only following menu options would be there : Home, Resort Details, Restaurant Details, Contact Us, About BizitoGo, Privacy Policy, Terms & Conditions, Rate Us on Playstore, Login/Register, Logout
+(complete)
+5. I am unable to see my facebook/google+ profile image being fetched.
+(need again check)
+6. On the "Select Menu" screen put a $ sign in front of the product prices being shown.
+(complete)
+7. Veg/Non-Veg icon sign in the Sides/Options popup is missing. Add it.
+(complete)
+8. In the Sides/Options popup just below the Header show Dish Description that you are getting in the dishes list API.
+    Also there are 2 more values coming in the dishes API limit_sides and limit_options which would determine how many max. options and sides a user can select.
+(complete)
+9. In the Popup the two subheader Texts would be :
+    a. Select Sides ( <Values of 'text_sides' parameter coming in dish API>)
+    b. Select Options (<Values of 'text_options' parameter coming in dish API>)
+(complete)
+10. The popup on top should only show price of single quantity and not the total amount selected.
+(complete)
+11. In the dishes listing if a have added an item to cart, then its cart icon color should change to black/blue, so show it to the user that he has selected that item.
+(complete)
+12. When i have created my cart and then go back to restaurant/resort page and change my restaurant my cart should get empty. Currently it is not happening. At a single time I can book order from a single restaurant only.
+(complete)
+13. Category icons in the "More..." menu is missing. Add it.
+(complete)
+14. Resort Name is missing from the "Deliver To" section in the billing details page.
+(complete)
+15. On Restaurant Listing Page change wording of Morning and Evening Time to Lunch and Dinner Time
+(complete)
+16. Share option on Restaurant Listing and Select Menu screen is not working.
+(check again,already complete)
+17. When a user place an order through guest account then after the payment has been made the user account is created and he no longer is a guest user and he gets all his credentials in response. So display all those credentials with the correct menu options.
+
+18. I have got the Restaurant Name added in the Order List API. So get the Restaurant Name displayed over there.
+(API not ready)
+19. In the order details page of the Order History with each item we'll be showing its Toppings (Sides/options) also just below its name. Current you are not showing it. Get it displayed as well.
+(complete)
+20. In the order details page of the Order History show the Shipping, Tax Amount and Driver Tip Amount also above the "Total".
+(complete)
+21. In the Track Order the color of the Boxes will be based on the current State the order is at.
+    a. Red with outer Circle : Current State of the Order
+    b. Red : State which is finished
+    c. Circle with White Color : State of order which has not yet arrived.
+
+    So display it accordingly.
+(complete)
+22. On contact us page the Company Type Dropdown will just have 2 values :
+    a. Resort
+    b. Restaurant
+
+    Correct it !
+(complete)
+23. While adding my profile picture it doesn't give me an option to select a picture from gallery. It just gives an option to select it from Camera. Correct it !
+
+24. Put a Minimum order amount restriction for a user to be $15 during Lunch Time and $25 during Dinner Time. He cannot place an order less than this.
+    Lunch Time and Dinner time will be compared to Restaurant Lunch and Dinner Time.
+(complete)
+
+
+Make these corrections and share with me an updated APK so that I can test it in detail and share more detailed feedback with you tomorrow.
+
+If you have doubts over any point then let me know.

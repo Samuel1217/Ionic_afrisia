@@ -1,0 +1,63 @@
+<ion-view class="profile-view" title='<h3 style="margin-top:4px;font-weight: 500; color: #96c424;">Profile Update</h3>' ng-init="init()">
+    <ion-nav-bar class="bar-positive">
+            <!--<ion-nav-back-button  class="button-clear"><i class="ion-ios-arrow-back"></i>-->
+            <!--</ion-nav-back-button>-->
+
+            <ion-nav-buttons side="right">
+               <button class="button button-icon button-clear" ng-click="goToHome()">
+                  <img class="back-button-img" src="img/multiple_button.png">
+               </button>   
+            </ion-nav-buttons>
+            
+            
+
+              
+        </ion-nav-bar>
+    <ion-content has-bouncing="true">
+        
+        <div class="content-container">
+            <div class="profile-container">
+              <div class="pic-circle">
+                <div ng-if="loggedin" class="profile-pic">
+                    <img ng-src="{{user.user_photo_url}}" />
+                    <button ng-if="loggedin" class="button button-light edit-btn ion-ios-color-wand-outline" type="button" ng-click="editAvatar()"></button>
+                </div>
+               
+          
+                <div ng-if="!loggedin" class="profile-pic">
+                    <img src="img/profile-pic-default.png" />
+                    <button class="button button-light edit-btn ion-ios-color-wand-outline" type="button" ng-click="editAvatar()"></button>
+                </div>
+              </div>
+                <!--<div class="fb-con" ng-if="loggedin">-->
+                    <!--<button class="button button-block button-positive icon-left ion-social-facebook fb-btn" type="button" ng-click="fbConnect()">Connect with Facebook</button>-->
+                <!--</div>-->
+            </div>
+ 
+             <div class="title">Name</div>
+             <label class="item item-input">
+                    <input ng-model="user.user_name" type="text" placeholder="Your Full Name">
+             </label>
+             <div class="title">Email</div>
+             <label class="item item-input">
+                    <input ng-model="user.user_email" type="email" placeholder="Your Email">
+             </label>
+              <div class="title">Password</div>
+             <label class="item item-input">
+                    <input ng-model="user.user_pass" type="password" placeholder="Password">
+             </label>
+               <div class="title">Confirm Password</div>
+             <label class="item item-input">
+                    <input ng-model="user.user_confirm" type="password" placeholder="Confirm Password">
+             </label>
+        
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar align-title="left" class="bar-assertive" ng-click="update()" ng-if="loggedin">
+        <h1 class="title"><icon class="icon ion-android-person"></icon>&nbsp;Update Profile</h1>
+    </ion-footer-bar>
+    <ion-footer-bar align-title="left" class="bar-assertive" ng-click="goLogin()" ng-if="!loggedin">
+        <h1 class="title"><icon class="icon ion-android-person"></icon>&nbsp;Please LogIn</h1>
+    </ion-footer-bar>
+</ion-view>

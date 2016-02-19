@@ -1,0 +1,62 @@
+
+1. Proxy setting ,
+    - distribution version will be removed this
+    - gulpfile.js
+        /***
+         * Created by yo 20150904
+         */
+         // npm install --save replace
+         var replace = require('replace');
+         var replaceFiles = ['./www/js/app.js'];
+
+         gulp.task('add-proxy', function() {
+             return replace({
+                 regex: "http://food.bizitogo.com/biziApi",
+                 replacement: "http://localhost:8100/biziApi",
+                 paths: replaceFiles,
+                 recursive: false,
+                 silent: false,
+             });
+         });
+
+         gulp.task('remove-proxy', function() {
+             return replace({
+                 regex: "http://localhost:8100/biziApi",
+                 replacement: "http://food.bizitogo.com/biziApi",
+                 paths: replaceFiles,
+                 recursive: false,
+                 silent: false,
+             });
+         });
+
+    - ionic.project
+        {
+          "name": "BiziToGo",
+          "app_id": "",
+          "proxies": [
+              {
+                  "path": "/biziApi",
+                  "proxyUrl": "http://food.bizitogo.com/biziApi"
+              }
+          ]
+        }
+
+        ->
+
+        {
+          "name": "BiziToGo",
+          "app_id": ""
+        }
+    - services.js
+        .constant('ApiEndpoint', {
+            url: 'http://localhost:8100/biziApi'
+        })
+
+        ->
+
+        .constant('ApiEndpoint', {
+            url: 'http://food.bizitogo.com/biziApi/'
+        })
+2. less/variables.less
+    - @iphone-top: 0px; -> @iphone-top: 20px;
+

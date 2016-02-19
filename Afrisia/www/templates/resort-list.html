@@ -1,0 +1,143 @@
+<ion-view title='<h2 style="margin-top:4px;font-weight: 700;">AFRISIA</h2>' class="resort-view"" hide-nav-bar="false" ng-init="init()">
+
+        <!--<button class="button icon ion-ios-arrow-back subnav-back" ng-click="goBack()"></button>-->
+
+    <ion-nav-bar class="bar-positive" >
+       <ion-nav-buttons side="left">
+           <button class="button button-icon button-clear" ng-click="showMenu()">
+               <img style="margin-left: 10px; width: 35px; height: 35px;" src="img/nav-user.png">
+           </button>   
+        </ion-nav-buttons>
+            
+            
+
+        <ion-nav-buttons side="right">
+            <button class="button button-icon button-clear" ng-click="showRightMenu()" >
+               <img style="margin-left: 10px; width: 35px; height: 35px;" src="img/about.png" >
+            </button>
+        </ion-nav-buttons>
+       
+    </ion-nav-bar>    
+     <div class="bar bar-subheader item-input-inset"  pulling-text="Refresh..." 
+               on-refresh="doRefresh()" >
+            <div class="title">- Effectuer une recherche -</div>
+                <label class="item-input-wrapper">
+                
+                <input ng-model="active_search" type="search" placeholder="Nom, Ville, Label...">
+                
+        
+                </label>
+                <button class="button-clear search_button"  ng-click="researchList()">
+                    <img class="search_icon" src="img/search_icon.png">
+                </button>
+                <button class="button-clear" ng-click="goResearch()">
+                    <img class="plus_button" src="img/plus_button.jpg">
+                </button>
+            </div>
+        </div>
+     
+     <ion-content ng-controller="ResortListCtrl" style="padding-top:70px;">
+
+         <ion-refresher
+               pulling-text="Refresh..." 
+               on-refresh="doRefresh()">
+         </ion-refresher>
+         <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+            <ion-item 
+                 ng-repeat="item in items" 
+                 class=" item-text-wrap" 
+                 ng-href="#"
+                 ng-click="openBusiness(item)"
+                 item="item"
+                 >
+ 
+             <img class="item-img" ng-src="{{item.business_photo_url}}">
+             <div class="overlay_theme">
+                <div class="row">
+                    <div class="favorit-container">
+                        <img ng-if="!loggedin" class="favorit-mark" ng-src="img/unfavorit.png" ng-click="goLeaveComment()">
+                        <img ng-if="loggedin" class="favorit-mark" ng-src="img/favorit.png" ng-click="goLeaveComment()">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="rate-container">
+                        <div class="circle-mark">
+                            <div class="project-number">
+                                {{item.business_rate_score}}
+                            </div>
+                            <div class="rate-number">
+                               ,{{item.business_rate_num}}
+                            </div>
+                            <div class="total">
+                               /10
+                            </div>   
+                        </div> 
+                    </div>
+                </div>
+               <div class="row">
+                   <div class="business-name">
+                       {{item.business_name}}
+                   </div>
+                  
+                   <img class="order-check" src="img/leaf.png">
+               </div>
+               <div class="row">
+                   <div class="col col-25">
+                   <div class="type-name">
+                       [TYPE]
+                   </div>
+                  
+               
+                 </div>
+                 <div class="col ">
+                     
+                     <div class="country-name">
+                       {{item.business_city}}
+                     </div>
+                     <img class="map-icon" src="img/map_direct.png">
+                 </div>
+               </div>
+               <div class="row">
+                    <div class="label-name">
+                       [label 1] 
+                   </div>
+                    <div class="label-name">
+                       [label 2] 
+                   </div>
+               </div>
+             </div>
+                  <ion-delete-button class="ion-minus-circled"
+                                   ng-click="onItemDelete(item)">
+                </ion-delete-button>
+
+               <ion-option-button class="button-assertive"
+                                   ng-click="share(item)">
+                    <div class="share-btn">
+                        <i class="icon icon-share-alt"></i>
+                        <span>Share</span>
+                    </div>
+
+                </ion-option-button>
+                      <ion-option-button class="button-assertive"
+                                   ng-click="share(item)">
+                    <div class="share-btn">
+                        <i class="icon icon-share-alt"></i>
+                        <span>Share</span>
+                    </div>
+
+                </ion-option-button>
+                <ion-reorder-button class="ion-navicon" on-reorder="moveItem(item, $fromIndex, $toIndex)"></ion-reorder-button>
+             
+   
+     
+         </ion-item>
+       </ion-list>
+             
+          
+      
+         
+         
+         
+         
+     </ion-content>
+</ion-view>

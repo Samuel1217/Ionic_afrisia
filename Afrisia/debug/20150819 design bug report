@@ -1,0 +1,45 @@
+1. Splash Screen is coming fully distorted and streatched. Correct it ! Also the text BizitoGo which is written on it is not clear. I have attached the font file of it to write that text. You can use it to make it clear.
+(complete)
+2. There is a very thin white line coming below the sub-header on all screen. Remove it.
+(complete)
+3. Reduce the font size on the sub-header. Also the text on the sub-header is looking blurred.
+(complete,color to white,font 14 -> 13)
+4. On select menu screen on the top image the Name of the restaurant, restaurant logo and restaurant timings will also come.
+Also it would be a slider of Images in which images will automatically scroll in the background.
+(complete)
+5. On Select Restaurant List Page : The top header image will be of the resort and will remain fixed. Also it will contain the resort name, address, and its logo also on it. Only the below restaurant list will scroll.
+Also the restaurant items will not show address, but will show restaurant timings like :
+Morning : 10am - 2pm
+Evening : 4pm - 10pm
+
+Remove the favorite icon also from it.
+(Changed require from origin psd, but complete)
+6. On Login via Email Page the text which is coming in the text boxes will be black in color.
+(complete)
+7. Top character image is missing from forgot password page.
+(complete)
+8. Click on More option in the Select Menu screen will open a "Drop Menu" which will have more categories listed in it.
+And the item which is clicked in it will come on 1st position and the 3rd item will go inside.
+(action complete,but all not sure)
+9. The way date and time in shown on the Order State and Order History page is not as per the design.
+Make necessary changes so that it matches the design.
+(complete)
+10. The pop-up layout which I have shared with you today is missing.
+
+11. On card detail page remove option to save the card.
+(complete)
+12. On Order Checkout Page : There was a divider line b/w Net price, Delivery Price and Grand Total which is missing.
+Also Add another option in it for "Taxes". Apart from it Grand Total should be in bold and Highlighted.
+Font size of the items Heading on this page is too big. Make it a bit smaller.
+(complete)
+13. On Order History Page the Total Amount should be highlighted. Also the tags of Pending, completed etc. is not coming as per the designs. Correct it.
+(complete)
+14. Clicking on top right icon in header will open up the side menu showing list of items which is being added to the cart.
+ And there would be a button in it for Checkout.
+
+15. The font size and color of the word "Register" on the register page is not as per the design. Correct it.
+(complete)
+16. Back button in the sub-header is not working on any of the screens. Also it is looking blurred. Correct it.
+
+17. On contact us page the Company Type would be a dropdown and not a text field. Correct it.
+(complete)
